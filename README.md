@@ -27,7 +27,7 @@ As I complete each week's assignments, I will update this tracker. Click on any 
 ### ⚙️ Backend AI Engineering Track
 - [x] **[Week 1: Build your first API endpoint](./Backend/Week_01)** *(Completed)*
 - [x] **[Week 2: Backend Architecture Foundations](./Backend/Week_02)** *(Completed)*
-- [ ] **[Week 3: Containerize your stack](./Backend/Week_03)** *(In Progress)*
+- [ ] **[Week 3: Containerize your stack](./Backend/Week_03)** *(Completed)*
 - [ ] **[Week 4: Authentication & Scraping](./Backend/Week_04)**
   - [ ] Auth - Login & protect
   - [ ] The polite scraper
@@ -48,8 +48,3 @@ As I complete each week's assignments, I will update this tracker. Click on any 
 Each weekly directory contains:
 1. **Source Code:** The heavily commented, functional code for that week's assignment.
 2. **Dedicated README:** A specific markdown file containing execution instructions, architecture overviews, and screenshot proof of successful local or containerized execution.
-
----
-<div align="center">
-  <b>Developed by an aspiring Cloud & AI Infrastructure Engineer.</b>
-</div>
