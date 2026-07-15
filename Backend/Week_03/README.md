@@ -23,15 +23,14 @@ Run PostgreSQL in Docker, connect the Node.js service using a repository pattern
 ### 1. Proof of Persistence
 To prove data survives container teardown, a row was inserted, the containers were destroyed (`docker compose down`), rebuilt, and the database was successfully queried again.
 
-*(Drag and drop Screenshot 1 here: Data Insertion)*
+<img width="1920" height="1005" alt="pre-restart" src="https://github.com/user-attachments/assets/d4211a1e-92a7-491e-8c62-f65989490c02" />
 
 <br>
 
-*(Drag and drop Screenshot 2 here: Data Retrieval Post-Restart)*
-
+<img width="1920" height="1030" alt="post-restart" src="https://github.com/user-attachments/assets/f034709b-ba3d-4cf2-8bb3-b36fd872df85" />
 ---
 
 ### 2. Stretch Goal: SQL Indexing & Profiling
 A query profile was generated on the `name` column before and after creating a B-Tree index (`idx_interns_name`), demonstrating standard production optimization practices.
 
-*(Drag and drop Screenshot 3 here: Explain Analyze Output)*
+<img width="1920" height="678" alt="execution sql" src="https://github.com/user-attachments/assets/e2884f70-502d-47d6-a822-4748db94dfcc" />
