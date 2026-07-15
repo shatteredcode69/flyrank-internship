@@ -13,21 +13,16 @@
 ## 📌 About This Repository
 This repository serves as my living portfolio and technical deliverable for the **FlyRank Internship Program**. Over the course of 8 weeks, I am designing, building, and deploying scalable backend services, orchestrating databases, and deeply integrating AI APIs into production-ready workflows.
 
-### 🎯 Core Objectives
-* **Backend Architecture:** Building secure, RESTful APIs, managing relational databases, and implementing authentication.
-* **AI Integration:** Connecting external AI APIs, building decision flows, and developing agents with strict guardrails.
-* **Cloud & DevOps:** Utilizing containerization (Docker), background jobs, and cloud infrastructure for highly reliable deployments.
-
----
-
 ## 🗓️ 8-Week Progress Tracker
 
-As I complete each week's assignments, I will update this tracker. Click on any completed week to view the source code, technical documentation, and visual proof of execution.
+### 🤖 General AI Fluency (Foundations)
+- [x] **[Week 1: AI Workflow Audit and Tool Setup](./AI_Fluency/Week_01/Task_1_Audit)** - [x] **[Week 1: Portfolio Sitemap + Toolkit](./AI_Fluency/Week_01/Task_2_Sitemap)** - [x] **[Week 1: What Are You Proving?](./AI_Fluency/Week_01/Task_3_Proving)** - [x] **[Week 2: Frame It as Cases](./AI_Fluency/Week_02/Task_1_Case_Studies)** *(Completed)*
+- [x] **[Week 2: The Prompt Ladder](./AI_Fluency/Week_02/Task_2_Prompt_Ladder)** *(Completed)*
 
 ### ⚙️ Backend AI Engineering Track
 - [x] **[Week 1: Build your first API endpoint](./Backend/Week_01)** *(Completed)*
 - [x] **[Week 2: Backend Architecture Foundations](./Backend/Week_02)** *(Completed)*
-- [ ] **[Week 3: Containerize your stack](./Backend/Week_03)** *(In Progress)*
+- [x] **[Week 3: Containerize your stack](./Backend/Week_03)** *(Completed)*
 - [ ] **[Week 4: Authentication & Scraping](./Backend/Week_04)**
   - [ ] Auth - Login & protect
   - [ ] The polite scraper
@@ -48,8 +43,3 @@ As I complete each week's assignments, I will update this tracker. Click on any 
 Each weekly directory contains:
 1. **Source Code:** The heavily commented, functional code for that week's assignment.
 2. **Dedicated README:** A specific markdown file containing execution instructions, architecture overviews, and screenshot proof of successful local or containerized execution.
-
----
-<div align="center">
-  <b>Developed by an aspiring Cloud & AI Infrastructure Engineer.</b>
-</div>
