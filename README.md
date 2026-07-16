@@ -23,9 +23,9 @@ This repository serves as my living portfolio and technical deliverable for the 
 - [x] **[Week 1: Build your first API endpoint](./Backend/Week_01)** *(Completed)*
 - [x] **[Week 2: Backend Architecture Foundations](./Backend/Week_02)** *(Completed)*
 - [x] **[Week 3: Containerize your stack](./Backend/Week_03)** *(Completed)*
-- [ ] **[Week 4: Authentication & Scraping](./Backend/Week_04)**
-  - [ ] Auth - Login & protect
-  - [ ] The polite scraper
+- [x] **[Week 4: Authentication & Scraping](./Backend/Week_04)** *(Completed)*
+  - [x] Auth - Login & protect
+  - [x] The polite scraper
 - [ ] **[Week 5: AI Integrations](./Backend/Week_05)**
   - [ ] Connect to an AI API
 - [ ] **[Week 6: Asynchronous Processing](./Backend/Week_06)**
