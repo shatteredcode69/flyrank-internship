@@ -28,8 +28,8 @@ This repository serves as my living portfolio and technical deliverable for the 
   - [x] The polite scraper
 - [ ] **[Week 5: AI Integrations](./Backend/Week_05)**
   - [ ] Connect to an AI API
-- [ ] **[Week 6: Asynchronous Processing](./Backend/Week_06)**
-  - [ ] Your first background job
+- [x] **[Week 6: Asynchronous Processing](./Backend/Week_06)** *(Completed)*
+  - [x] Your first background job
 - [ ] **[Week 7: Decision Flows & Generators](./Backend/Week_07)**
   - [ ] Build an AI Decision Flow with React Flow + Inngest
   - [ ] PDF report generator
