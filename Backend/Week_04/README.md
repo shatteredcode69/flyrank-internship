@@ -22,10 +22,10 @@ Add real authentication to the service: users register and log in (with hashed p
 ### 📸 Proof of Execution (Task 1)
 
 **1. Guarding the Route (401 Unauthorized)**
-*(Drag and drop Auth Screenshot 1 here)*
+<img width="1920" height="1023" alt="401 error" src="https://github.com/user-attachments/assets/fc415370-77bd-4a0b-9e6e-98671352582b" />
 
 **2. Successful Login & Protected Access**
-*(Drag and drop Auth Screenshot 2 here)*
+<img width="1920" height="1033" alt="welcome" src="https://github.com/user-attachments/assets/fb6c0fd8-9469-444c-af41-a6e0ba0df22c" />
 
 ---
 
@@ -44,7 +44,7 @@ Build a robust data-gathering pipeline (fetch → parse → extract → clean �
 ### 📸 Proof of Execution (Task 2)
 
 **1. Polite Execution Logs (Terminal)**
-*(Drag and drop Scraper Screenshot 1 here)*
+<img width="1920" height="1015" alt="scarper" src="https://github.com/user-attachments/assets/0283ca1a-ff91-4d69-a012-0ffe9f81a7e5" />
 
 **2. Structured Output (`corpus.json`)**
-*(Drag and drop Scraper Screenshot 2 here)*
+<img width="1920" height="1028" alt="corpus" src="https://github.com/user-attachments/assets/53d32544-b03e-4643-aa7d-426d91caea36" />
