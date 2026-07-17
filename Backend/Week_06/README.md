@@ -51,9 +51,9 @@ Move a slow, heavy operation out of the main request thread. Ensure the API endp
 **1. Instant API Ingestion (202 Accepted)**
 The server accepts the heavy request and instantly returns an acknowledgment, refusing to block the main thread.
 
-*(Drag and drop Background Job Screenshot 1 here)*
+<img width="1920" height="1015" alt="scarper" src="https://github.com/user-attachments/assets/f8c5fca7-2347-4c97-9c84-9be39b0bfe38" />
 
 **2. Status Polling & Job Completion**
 After the background worker completes the simulated 8-second processing delay, querying the status endpoint retrieves the finished AI output.
 
-*(Drag and drop Background Job Screenshot 2 here)*
+<img width="1920" height="1028" alt="corpus" src="https://github.com/user-attachments/assets/29b665e3-cb96-41d5-baaa-d795e4636d66" />
