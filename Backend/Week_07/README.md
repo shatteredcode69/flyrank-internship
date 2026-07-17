@@ -21,10 +21,10 @@ Build a pipeline that queries data, renders it into a stylized PDF report, and p
 ### 1. Async Generation & Status Polling
 The API returns the completed status and the safe download URL.
 
-*(Drag and drop Screenshot 1 here)*
+<img width="1920" height="1023" alt="1" src="https://github.com/user-attachments/assets/1fe26c1f-221f-40fd-958d-4fbc38337a95" />
 
 ### 2. Generated PDF Artifact
 The dynamically generated PDF accessed via the provided download URL.
 
-*(Drag and drop Screenshot 2 here)*
-*(Drag and drop Screenshot 2 here)*
+<img width="1920" height="1033" alt="2" src="https://github.com/user-attachments/assets/de71943f-657b-48e1-b591-a279629f1500" />
+<img width="1920" height="1080" alt="3" src="https://github.com/user-attachments/assets/3fa31a2b-93d2-499a-8e22-c922b02e9f50" />
