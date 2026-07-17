@@ -27,10 +27,10 @@ Build a robust data-gathering pipeline (fetch → parse → extract → clean �
 ### 📸 Proof of Execution
 
 **1. Polite Execution Logs (Terminal)**
-*(Drag and drop Scraper Screenshot 1 here)*
+<img width="1920" height="1015" alt="scarper" src="https://github.com/user-attachments/assets/714595a7-3a1f-4946-9806-2b58c3198d34" />
 
 **2. Structured Output (`corpus.json`)**
-*(Drag and drop Scraper Screenshot 2 here)*
+<img width="1920" height="1028" alt="corpus" src="https://github.com/user-attachments/assets/99965c83-3e55-4b2f-b0d8-6dc3360de634" />
 
 ---
 
