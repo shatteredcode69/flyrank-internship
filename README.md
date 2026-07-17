@@ -32,7 +32,7 @@ This repository serves as my living portfolio and technical deliverable for the 
   - [x] Your first background job
 - [ ] **[Week 7: Decision Flows & Generators](./Backend/Week_07)**
   - [ ] Build an AI Decision Flow with React Flow + Inngest
-  - [ ] PDF report generator
+  - [x] PDF report generator
 - [ ] **[Week 8: Agents & Capstone](./Backend/Week_08)**
   - [ ] Agent with guardrails
   - [ ] Capstone Documentation and Case Study
