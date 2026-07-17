@@ -28,11 +28,11 @@ Add real authentication to the service: users register and log in (with hashed p
 **1. Guarding the Route (401 Unauthorized)**
 Attempting to hit the dashboard without a valid bearer token correctly yields a 401 error.
 
-*(Drag and drop Screenshot 1 here)*
+<img width="1920" height="1023" alt="401 error" src="https://github.com/user-attachments/assets/45707cc2-65a6-4ad6-8427-365a3e250054" />
 
 <br>
 
 **2. Successful Login & Protected Access**
 After registering and logging in, the provided JWT successfully grants access to the dashboard, extracting the user's tenant ID from the token payload.
 
-*(Drag and drop Screenshot 2 here)*
+<img width="1920" height="1033" alt="welcome" src="https://github.com/user-attachments/assets/d33894e5-a4c1-45c4-92dd-6cef6b1c0bfc" />
