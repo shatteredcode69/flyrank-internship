@@ -25,9 +25,9 @@ This repository serves as my living portfolio and technical deliverable for the 
 
 ### ⚙️ Backend AI Engineering Track
 - [x] **[Week 2: Build your first CRUD API](./Backend/Week_02)** *(Completed)*
-- [ ] **[Week 3: Database & Containers](./Backend/Week_03)**
-  - [ ] Connecting to the database *(Lead review pending)*
-  - [x] Containerize your stack *(Submitted)*
+- [x] **[Week 3: Database & Containers](./Backend/Week_03)** *(Completed)*
+  - [x] Connecting to the database 
+  - [x] Containerize your stack 
 - [ ] **[Week 4: Authentication](./Backend/Week_04)**
   - [ ] Auth - Login & protect *(Lead review pending)*
 - [ ] **[Week 5: AI Integrations](./Backend/Week_05)**

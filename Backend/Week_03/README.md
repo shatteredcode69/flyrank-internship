@@ -1,24 +1,59 @@
 <div align="center">
-  <h1>🐳 Week 3: Containerize Your Stack</h1>
-  <p><i>Implementing Docker, Postgres, Redis, and the Repository Pattern</i></p>
+  <h1>🐳 Week 3: Databases & Containers</h1>
+  <p><i>Achieving data persistence with SQLite and orchestrating the stack via Docker.</i></p>
 </div>
 
 ---
 
-## 🎯 Objective
-Run PostgreSQL in Docker, connect the Node.js service using a repository pattern (swapping in-memory for persistent storage), and orchestrate the stack using Docker Compose.
-
-## 🏗️ Architecture & Requirements Met
-- ✅ **Docker Compose:** App, Postgres, and Redis orchestrated via a single `docker compose up -d` command.
-- ✅ **Volume Persistence:** Database data is mounted and preserved via the `pgdata` volume.
-- ✅ **Repository Pattern:** `repository.js` completely isolates the database logic. **The service routes remained entirely unchanged**—they continue to call `InternRepository` blindly.
-- ✅ **Environment Security:** `.env` is properly gitignored, and a structural `.env.example` is committed.
-- ✅ **Stretch Goal 1 (Redis):** A Redis container was added to the compose file and successfully pinged via the `/api/status` endpoint.
-- ✅ **Stretch Goal 2 (SQL Indexing):** Performance profiling was conducted using `EXPLAIN ANALYZE` before and after index creation.
+## 📋 Week 3 Assignments Status
+- [x] **Task 1: Containerize your stack** 
+- [x] **Task 2: Connecting to the database (SQLite)** 
 
 ---
 
-## 📸 Visual Proof of Execution
+## 🗄️ Task 2: Connecting to the Database (`/Task_2_SQLite`)
+
+### 🎯 Objective
+Replace the volatile in-memory array from Week 2 with a persistent, embedded SQLite database. The API layer remains entirely unchanged to the client, demonstrating the separation of concerns between business logic and the storage layer.
+
+### 🏗️ Architecture & Storage
+- **Why SQLite?** Utilized Node's native `node:sqlite` module. It is a serverless, zero-configuration database engine that writes directly to a standard disk file, removing the overhead of managing a dedicated database server daemon or C++ compilers.
+- **Where is the data stored?** The database is stored locally inside the project directory as a flat file named `tasks.db`.
+- **Automatic Schema Migration:** Upon initialization, the server checks if the `tasks` table exists. If it does not, it automatically runs the `CREATE TABLE` execution and seeds the database with three default tasks.
+
+### 📸 Proof of Execution
+
+**1. Server Initialization & Listening Log**
+The terminal output demonstrating the automatic database seeding and successful server boot.
+
+*(Drag and drop Server Log Screenshot here)*
+
+**2. API Persistence Verification (cURL)**
+Executing standard HTTP requests to verify the API interacts properly with the new SQLite storage layer.
+
+*(Drag and drop cURL Screenshot here)*
+
+**3. Direct SQL Execution**
+Executing manual SQL queries inside an SQLite Viewer to verify data integrity and complete Stage 4 requirements. Example query executed:
+```sql
+SELECT * FROM tasks;
+```
+
+*(Drag and drop DB Viewer Screenshot here)*
+
+---
+
+## 🐳 Task 1: Containerize Your Stack (`/Task_1_Docker`)
+
+### 🎯 Objective
+Wrap the Node.js application inside an isolated Docker container to eliminate the "it works on my machine" problem, ensuring identical execution environments across local development and production deployments.
+
+### 🏗️ Docker Architecture
+- Created a lightweight `Dockerfile` utilizing the `node:18-alpine` base image to minimize surface area and image size.
+- Exposed port `3000` to allow local host machine networking to route into the isolated container instance.
+- Orchestrated the build and run process using a streamlined container pipeline.
+
+### 📸 Proof of Execution
 
 ### 1. Proof of Persistence
 To prove data survives container teardown, a row was inserted, the containers were destroyed (`docker compose down`), rebuilt, and the database was successfully queried again.
