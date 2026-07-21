@@ -21,9 +21,10 @@ This repository serves as my living portfolio and technical deliverable for the 
 - [x] **[Week 1: What Are You Proving?](./AI_Fluency/Week_01/Task_3_Proving)** 
 - [x] **[Week 2: Frame It as Cases](./AI_Fluency/Week_02/Task_1_Case_Studies)** 
 - [x] **[Week 2: The Prompt Ladder](./AI_Fluency/Week_02/Task_2_Prompt_Ladder)** 
+- [x] **[Week 6: Capstone - Impact Project](./AI_Fluency/Week_06_Capstone)** *(Completed!)* 🎉
 
 ### ⚙️ Backend AI Engineering Track
-- [x] **[Week 2: Build your first CRUD API](./Backend/Week_02)** *(Submitted)*
+- [x] **[Week 2: Build your first CRUD API](./Backend/Week_02)** *(Completed)*
 - [ ] **[Week 3: Database & Containers](./Backend/Week_03)**
   - [ ] Connecting to the database *(Lead review pending)*
   - [x] Containerize your stack *(Submitted)*
