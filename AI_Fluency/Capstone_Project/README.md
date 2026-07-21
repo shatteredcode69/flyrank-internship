@@ -41,10 +41,10 @@ The agent is designed to:
 ## 📸 Screenshots
 
 ### Portfolio UI
-Add a screenshot of the portfolio website here.
+<img width="1920" height="2863" alt="Web" src="https://github.com/user-attachments/assets/019fe39c-d9fa-44ae-9151-26713f4ab149" />
 
 ### Agent Prompt Documentation
-Add a screenshot of the agent prompt documentation here.
+<img width="1920" height="740" alt="agent prompt" src="https://github.com/user-attachments/assets/292a50fa-a79e-4f90-a86b-06499ec0b453" />
 
 ## ▶️ How to View
 Open [index.html](index.html) in a browser to view the portfolio page locally.
