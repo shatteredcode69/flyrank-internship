@@ -53,7 +53,7 @@ Keep-Alive: timeout=5
 ### 2. Swagger UI Documentation
 Interactive visual documentation automatically rendering the OpenAPI specification.
 
-*(Drag and drop Swagger Screenshot here)*
+<img width="1920" height="1028" alt="Swagger" src="https://github.com/user-attachments/assets/5d3b41cb-683a-4172-9f75-157bc916e291" />
 
 ---
 
