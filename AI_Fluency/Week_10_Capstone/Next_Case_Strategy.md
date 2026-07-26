@@ -20,6 +20,6 @@ When I complete the Azure milestone or the upcoming backend Agent capstone, I wi
 ## 3. The Concrete Reminder
 To enforce this habit, I have set a recurring calendar event to sync my GitHub repositories with my front-facing portfolio.
 
-*(Drag and drop Calendar Reminder Screenshot here)*
+<img width="1917" height="973" alt="capstone 2" src="https://github.com/user-attachments/assets/00374b87-0707-40c8-ad5c-8cc565d1593d" />
 - **Event Name:** 🚀 Ship Portfolio Update (Azure / Backend Capstone)
 - **Date:** August 15, 2026 (Recurring monthly)
