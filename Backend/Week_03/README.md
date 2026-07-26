@@ -26,12 +26,12 @@ Replace the volatile in-memory array from Week 2 with a persistent, embedded SQL
 **1. Server Initialization & Listening Log**
 The terminal output demonstrating the automatic database seeding and successful server boot.
 
-*(Drag and drop Server Log Screenshot here)*
+<img width="1671" height="522" alt="1" src="https://github.com/user-attachments/assets/3c4e7ec2-7a82-4707-867d-90d0b1fa5522" />
 
 **2. API Persistence Verification (cURL)**
 Executing standard HTTP requests to verify the API interacts properly with the new SQLite storage layer.
 
-*(Drag and drop cURL Screenshot here)*
+<img width="1849" height="944" alt="api" src="https://github.com/user-attachments/assets/a65a1a3a-7457-4980-922e-f52b2a67bfc5" />
 
 **3. Direct SQL Execution**
 Executing manual SQL queries inside an SQLite Viewer to verify data integrity and complete Stage 4 requirements. Example query executed:
@@ -39,8 +39,7 @@ Executing manual SQL queries inside an SQLite Viewer to verify data integrity an
 SELECT * FROM tasks;
 ```
 
-*(Drag and drop DB Viewer Screenshot here)*
-
+<img width="1920" height="988" alt="db" src="https://github.com/user-attachments/assets/609cbc59-2d0b-4e42-88a6-c828f231f420" />
 ---
 
 ## 🐳 Task 1: Containerize Your Stack (`/Task_1_Docker`)
