@@ -15,21 +15,22 @@ This repository serves as my living portfolio and technical deliverable for the 
 
 ## 🗓️ 8-Week Progress Tracker
 
-### 🤖 General AI Fluency (Foundations)
+### 🤖 General AI Fluency (Foundations) - Track Complete 🏆
 - [x] **[Week 1: AI Workflow Audit and Tool Setup](./AI_Fluency/Week_01/Task_1_Audit)** 
 - [x] **[Week 1: Portfolio Sitemap + Toolkit](./AI_Fluency/Week_01/Task_2_Sitemap)** 
 - [x] **[Week 1: What Are You Proving?](./AI_Fluency/Week_01/Task_3_Proving)** 
 - [x] **[Week 2: Frame It as Cases](./AI_Fluency/Week_02/Task_1_Case_Studies)** 
 - [x] **[Week 2: The Prompt Ladder](./AI_Fluency/Week_02/Task_2_Prompt_Ladder)** 
-- [x] **[Week 6: Capstone - Impact Project](./AI_Fluency/Week_06_Capstone)** *(Completed!)* 🎉
+- [x] **[Week 6: Capstone 1 - Impact Project](./AI_Fluency/Week_06_Capstone)** 
+- [x] **[Week 10: Capstone 2 - Send the Link](./AI_Fluency/Week_10_Capstone)** 
 
 ### ⚙️ Backend AI Engineering Track
 - [x] **[Week 2: Build your first CRUD API](./Backend/Week_02)** *(Completed)*
 - [x] **[Week 3: Database & Containers](./Backend/Week_03)** *(Completed)*
   - [x] Connecting to the database 
   - [x] Containerize your stack 
-- [ ] **[Week 4: Authentication](./Backend/Week_04)**
-  - [ ] Auth - Login & protect *(Lead review pending)*
+- [x] **[Week 4: Authentication](./Backend/Week_04)** *(Completed)*
+  - [x] Auth - Login & protect 
 - [ ] **[Week 5: AI Integrations](./Backend/Week_05)**
   - [ ] Connect to an AI API *(Lead review pending)*
 - [x] **[Week 6: Background Jobs & Scraping](./Backend/Week_06)** 
