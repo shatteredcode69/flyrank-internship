@@ -1,0 +1,20 @@
+{
+  "name": "capstone_image_relevance",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">\r   <h1>🖼️ Backend Capstone: Image Relevance & Auto-Tagging</h1>\r   <p><i>Orchestrating Vision Models, Semantic Search, and AI Guardrails for production-grade content matching.</i></p>\r </div>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@huggingface/inference": "^4.13.23",
+    "axios": "^1.19.0",
+    "compute-cosine-similarity": "^1.1.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
