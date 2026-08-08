@@ -18,7 +18,7 @@ To construct a visual workflow canvas using **React Flow**, offloading step-by-s
 ## 📸 Proof of Execution
 
 **1. React Flow Visual Canvas & Logs Panel**
-*(Drag and drop React Flow UI Screenshot here)*
+<img width="1918" height="976" alt="1" src="https://github.com/user-attachments/assets/cb5affbb-30d7-4f8e-ad00-f9e34570aaec" />
 
 **2. Inngest Background Worker Execution**
-*(Drag and drop Inngest Dashboard Screenshot here)*
+<img width="1920" height="977" alt="2" src="https://github.com/user-attachments/assets/d11ebb16-a30f-472b-840c-095429c3fad9" />
