@@ -36,16 +36,15 @@ Engineered a deterministic fallback layer (`server.js`). Even if an image achiev
 
 **1. The Test Corpus**
 The local directory containing the raw animal images prior to ingestion.
-*(Drag and drop a screenshot of your local `images` folder showing fox.jpg, wolf.jpg, etc. here)*
+<img width="1920" height="309" alt="1" src="https://github.com/user-attachments/assets/e6f94569-8467-4b0f-93f0-dc7c8a0f9ed1" />
 
 **2. Batch Job Execution & Cost Logging**
 Terminal output proving the background job ingesting the test images, successfully outputting structured tags, and tracking token costs.
-*(Drag and drop the Terminal Screenshot of `node ingest.js` running here)*
-
+<img width="1920" height="1022" alt="2" src="https://github.com/user-attachments/assets/0c1051d1-4854-4f00-a9e4-9355a3d277ea" />
 **3. The Red Fox Test (Approved Match)**
 cURL or Postman output showing a successful `MATCH_APPROVED` response when the system correctly pairs the fox image with the fox post.
-*(Drag and drop the API Success Screenshot here)*
+<img width="702" height="373" alt="3" src="https://github.com/user-attachments/assets/87b34959-2c4e-42f2-ba7c-32a3178c9ffc" />
 
 **4. The Wolf Test (Mismatch Guard Rejection)**
 cURL or Postman output demonstrating the Guardrail actively rejecting a high-ranking wolf or dog image due to strict tag disagreement. *(To trigger this, temporarily delete `fox.jpg` from your DB and run the request again so the wolf becomes the highest-scoring image).*
-*(Drag and drop the API Guardrail Rejection Screenshot here)*
+<img width="694" height="376" alt="4" src="https://github.com/user-attachments/assets/01967c7c-f6a2-41bd-becd-ed49baee39d7" />
