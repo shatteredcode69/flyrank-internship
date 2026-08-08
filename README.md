@@ -42,9 +42,9 @@ This repository serves as my living portfolio and technical deliverable for the 
 - [x] **[Week 6: Background Jobs & Scraping](./Backend/Week_06)** 
   - [x] The polite scraper *(Submitted)*
   - [x] Your first background job *(Submitted)*
-- [ ] **[Week 7: Decision Flows & Generators](./Backend/Week_07)**
-  - [ ] Build an AI Decision Flow with React Flow + Inngest *(Lead review pending)*
-  - [x] PDF report generator *(Submitted)*
+- [x] **[Week 7: Decision Flows & Generators](./Backend/Week_07)** *(Completed)*
+  - [x] **[Task 1: PDF Report Generator](./Backend/Week_07/Task_1_PDF_Generator)**
+  - [x] **[Task 2: AI Decision Flow (React Flow + Inngest)](./Backend/Week_07/Task_2_Decision_Flow)**
 - [ ] **[Week 8: Agents & Capstone](./Backend/Week_08)**
   - [ ] Agent with guardrails *(Lead review pending)*
   - [ ] Capstone Documentation and Case Study *(Lead review pending)*
