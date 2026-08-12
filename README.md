@@ -34,7 +34,6 @@ This repository serves as my living portfolio and technical deliverable for the 
 - [x] **[Week 6: Polish, Feedback, and System Ownership](./AI_Fluency/Week_06)** *(Completed)*
   - [x] Task 1: Explain It Like You Built It
   - [x] Task 2: Survive the Crit
-  - [ ] Task 3: Professional Setup and Security Baseline *(Lead review pending)*
 - [x] **[Week 6: Capstone 1 - Impact Project](./AI_Fluency/Week_06_Capstone)**
 - [x] **[Week 10: Capstone 2 - Send the Link](./AI_Fluency/Week_10_Capstone)**
 
