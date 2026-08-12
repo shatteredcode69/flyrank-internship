@@ -2,16 +2,16 @@
   <h1>🚀 FlyRank Backend AI Engineering Portfolio</h1>
   <p><i>A comprehensive 8-week journey building robust backend architecture, databases, AI integrations, and automated pipelines.</i></p>
 
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
-  <img src="https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/OpenAI-412991.svg?style=for-the-badge&logo=OpenAI&logoColor=white" alt="OpenAI" />
+  <img src="[https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)" alt="Node.js" />
+  <img src="[https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)" alt="Express" />
+  <img src="[https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)" alt="SQLite" />
+  <img src="[https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)" alt="Docker" />
+  <img src="[https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)" alt="AWS" />
+  <img src="[https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)" alt="Azure" />
+  <img src="[https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)" alt="JavaScript" />
+  <img src="[https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)" alt="HTML5" />
+  <img src="[https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)" alt="CSS3" />
+  <img src="[https://img.shields.io/badge/OpenAI-412991.svg?style=for-the-badge&logo=OpenAI&logoColor=white](https://img.shields.io/badge/OpenAI-412991.svg?style=for-the-badge&logo=OpenAI&logoColor=white)" alt="OpenAI" />
 </div>
 
 ---
@@ -37,11 +37,11 @@ This repository serves as my living portfolio and technical deliverable for the 
   - [x] Containerize your stack 
 - [x] **[Week 4: Authentication](./Backend/Week_04)** *(Completed)*
   - [x] Auth - Login & protect 
-- [ ] **[Week 5: AI Integrations](./Backend/Week_05)**
-  - [ ] Connect to an AI API *(Lead review pending)*
-- [x] **[Week 6: Background Jobs & Scraping](./Backend/Week_06)** 
+- [x] **[Week 5: Scrapers & Data Extraction](./Backend/Week_06)** 
   - [x] The polite scraper *(Submitted)*
-  - [x] Your first background job *(Submitted)*
+- [x] **[Week 6: AI Integrations & Background Jobs](./Backend/Week_06)** *(Completed)*
+  - [x] **[Task 1: Your first background job](./Backend/Week_06)**
+  - [x] **[Task 2: Connect to an AI API](./Backend/Week_06/Task_2_Connect_AI_API)**
 - [x] **[Week 7: Decision Flows & Generators](./Backend/Week_07)** *(Completed)*
   - [x] **[Task 1: PDF Report Generator](./Backend/Week_07/Task_1_PDF_Generator)**
   - [x] **[Task 2: AI Decision Flow (React Flow + Inngest)](./Backend/Week_07/Task_2_Decision_Flow)**
