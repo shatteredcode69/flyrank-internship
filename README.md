@@ -31,10 +31,10 @@ This repository serves as my living portfolio and technical deliverable for the 
 - [x] **[Week 3: Portfolio Foundations & Identity](./AI_Fluency/Week_03)** *(Completed)*
 - [x] **[Week 4: Build Phase, Automation workflows, and Agent Concepts](./AI_Fluency/Week_04)** *(Completed)*
 - [x] **[Week 5: Deployment, Real Users, and Personal AI Agents](./AI_Fluency/Week_05)** *(Completed)*
-  - [x] Task 1: Ship the Ugly One
-  - [x] Task 2 (FL-06): Design Your Personal Agent
-  - [x] Task 3 (FL-07): Build the Agent
-  - [x] Task 5 (PF-04): Personal Website Live on the FlyRank Domain
+- [x] **[Week 6: Polish, Feedback, and System Ownership](./AI_Fluency/Week_06)** *(Completed)*
+  - [x] Task 1: Explain It Like You Built It
+  - [x] Task 2: Survive the Crit
+  - [ ] Task 3: Professional Setup and Security Baseline *(Lead review pending)*
 - [x] **[Week 6: Capstone 1 - Impact Project](./AI_Fluency/Week_06_Capstone)**
 - [x] **[Week 10: Capstone 2 - Send the Link](./AI_Fluency/Week_10_Capstone)**
 
