@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🏗️ Week 4: Build Phase, Automation workflows, and Agent Concepts</h1>
+  <h1>🏗️ Week 4: Build Phase, Automation Workflows, and Agent Concepts</h1>
   <p><i>Deploying foundational architecture, evaluating tech stacks, and distinguishing workflows from autonomous agents.</i></p>
 </div>
 
@@ -7,109 +7,89 @@
 
 ## 🚀 Task 4.1: Empty but Live: Ship a Blank Page
 
-The hardest part of any deployment is getting the initial pipeline connected and resolving DNS. The repository has been initialized, connected to the hosting provider, and is officially live on the internet.
+The first major milestone of the build phase is establishing the deployment pipeline and ensuring public reachability. The repository has been initialized, connected to the hosting provider, and successfully deployed to the public internet.
 
-*   **Live URL:** `https://muhammadabbas.github.io/portfolio` *(Example)*
-*   **Mobile Verification:** Verified rendering and SSL handshake on a mobile device on cellular data.
-*   **Claude Project Sync:** The identity kit, content map, and case studies from Week 3 have been uploaded into a dedicated Claude Project to maintain consistent context during the build phase.
-
-> **📸 IMAGE REQUIRED BELOW: Drop a screenshot of your live blank page from your mobile device here.**
-> ![Mobile Live Verification](./path_to_mobile_screenshot.png)
+*   **Live URL:** `https://muhammadabbas.github.io/portfolio` *(Placeholder for actual URL)*
+*   **Deployment Architecture:** The project is deployed using GitHub Pages, ensuring a zero-cost, highly available static hosting environment.
+*   **Mobile Verification:** The blank page was explicitly tested on a mobile device over a cellular network to verify DNS resolution, SSL handshake completion, and baseline responsive rendering outside of a local development environment.
+*   **Claude Project Sync:** To maintain architectural consistency moving forward, the Week 3 Identity Kit (Inter/JetBrains Mono fonts, Slate/Orange palette), the content map, and all case study outlines have been loaded into a dedicated Claude Project.
 
 ---
 
 ## 🛣️ Task 4.2: Three Roads: Choose Your Stack with AI
 
-Selecting the right architecture requires balancing immediate portfolio needs with long-term maintainability. 
+Selecting the right architecture requires balancing immediate portfolio display needs with long-term maintainability and performance constraints.
 
-### The Constraints Provided to AI
-1.  **Cost:** 100% Free tier hosting.
-2.  **Skill Level:** Highly proficient in Python and AWS infrastructure; comfortable with frontend integrations.
-3.  **Requirements:** Needs to display image galleries, embedded diagrams, and link out to code repositories.
-4.  **Display Format:** Lightweight, fast-loading, long-form reading capabilities for deep technical case studies.
-5.  **Dynamic Needs:** No backend needed for the initial portfolio layer; dynamic elements will have their databases uploaded independently at a later stage.
+### 1. The Constraints
+*   **Cost:** Strictly free-tier hosting.
+*   **Skill Level:** Highly proficient in Python and AWS infrastructure; comfortable configuring lightweight frontend tools. 
+*   **Display Requirements:** Needs to elegantly render image galleries, embed technical architecture diagrams (like the Cloud-Edge RL topology), and cleanly link out to code repositories.
+*   **Dynamic Needs:** No backend needed for this initial portfolio layer. The application must remain static for now; any dynamic elements or databases will be handled and uploaded independently at a later stage.
 
-### The 3 Options Generated
-1.  **Option A (Simplest): Vanilla HTML/CSS/JS on GitHub Pages**
-    *   *Trade-off:* Lowest barrier to entry and fastest load times, but component reusability (like navbars or footers) becomes a manual copy-paste nightmare as the portfolio scales.
-2.  **Option B (The Front-Runner): React + Vite + Tailwind on GitHub Pages**
-    *   *Trade-off:* Requires a build step (`npm run build`), but offers massive component reusability, a lightweight footprint, and zero server costs.
-3.  **Option C (Most Powerful): Next.js on Vercel**
-    *   *Trade-off:* Overkill for a static portfolio. Offers Server-Side Rendering (SSR) and API routes, but introduces unnecessary complexity and potential vendor lock-in for simple static routing. 
+### 2. The Three Stack Options Evaluated
+1.  **Simplest: Vanilla HTML/CSS/JS hosted on GitHub Pages**
+    *   *Trade-off:* Lowest barrier to entry and fastest initial load time, but lacks component architecture. As case studies grow, maintaining global elements like navbars and footers becomes a manual, error-prone process.
+2.  **Front-Runner: React + Vite + Tailwind CSS hosted on GitHub Pages**
+    *   *Trade-off:* Requires a local Node environment and a build step. However, it offers massive component reusability, exceptionally fast hot-module replacement during development, and compiles down to highly optimized static assets.
+3.  **Most Powerful: Next.js hosted on Vercel**
+    *   *Trade-off:* Provides out-of-the-box Server-Side Rendering (SSR) and API routes. However, it is resource-intensive and overkill for a purely static portfolio, introducing unnecessary framework bloat.
 
-### The Rationale & Final Decision
-I have chosen **Option B: React + Vite + Tailwind deployed via GitHub Pages.** 
+### 3. Rationale & Final Decision
+I have chosen **React + Vite + Tailwind deployed via GitHub Pages.**
 
-A lightweight web development stack is strictly preferred over resource-heavy, monolithic frameworks (which I specifically avoid, having previously removed frameworks like Flutter for their high resource consumption). Vite provides lightning-fast hot module replacement during development, while Tailwind allows for rapid styling matching my exact Identity Kit hex codes without bloated CSS files. 
+A lightweight web development stack is heavily preferred over resource-intensive, monolithic frameworks (which I strictly avoid to keep resource consumption low). Vite provides the speed and modularity required, while Tailwind ensures the specific Identity Kit hex codes are applied efficiently without maintaining massive external CSS files. 
 
-*What breaks if I pick the simplest?* I lose component architecture, making case studies tedious to format.
-*Can I maintain this?* Yes. GitHub Actions will automate the build and deploy process directly to `gh-pages` on every commit. It showcases my work perfectly while keeping overhead near zero.
+*What breaks if I pick the simplest?* I lose the ability to create reusable UI components, making the addition of future technical case studies tedious.
+*Can I maintain this?* Absolutely. The build process can be fully automated using GitHub Actions to deploy the `dist` folder directly to GitHub Pages on every main branch commit, keeping maintenance overhead near zero while perfectly showcasing my work.
 
 ---
 
 ## ⚙️ Task 4.3 (FL-04): Ship an Automation Workflow v2
 
 **Pipeline:** Source-Grounded Defense Prep & Rebuttal Generator
-**Goal:** Automate the extraction of methodological flaws from technical research and convert them into structured defense preparation materials.
+**Goal:** Automate the extraction of methodological flaws from technical research and convert them into structured defense preparation materials for my final year project.
 
-### The Flow (4 Steps)
-1.  **Gather:** Upload local PDF drafts and reference papers regarding the "Hybrid Cloud-Edge Context-Aware QoS Optimization" thesis into NotebookLM.
-2.  **Synthesize:** Prompt NotebookLM to extract the top 5 architectural vulnerabilities (e.g., edge-node battery drain, state-space explosion in RL).
-3.  **Draft:** Feed the extracted vulnerabilities into a Claude Project (pre-loaded with my defense context) to generate aggressive panel questions and scripted rebuttals.
-4.  **Format:** Output the final responses directly into a markdown table format.
+### 1. The Workflow Design
+1.  **Gather:** Upload local PDF drafts and reference papers regarding the "Hybrid Cloud-Edge Context-Aware QoS Optimization using Reinforcement Learning" thesis into NotebookLM.
+2.  **Synthesize:** Prompt NotebookLM to extract the top 5 architectural vulnerabilities (e.g., edge-node battery drain, state-space explosion, reward hacking).
+3.  **Draft:** Feed the extracted vulnerabilities into a Claude Project (pre-loaded with the strict CS professor persona and project context) to generate aggressive panel questions and scripted rebuttals.
+4.  **Format:** Command the LLM to output the final responses directly into a strict markdown table format.
 
-### The Runs & Time Saved
-The pipeline was run on 5 specific technical domains of the project:
-1.  *RL Convergence Rates*
-2.  *Edge Compute Constraints*
-3.  *Telemetry Overhead*
-4.  *Cloud-to-Edge Sync Failures*
-5.  *Reward Hacking*
+### 2. Execution & Time Saved
+The pipeline was run across 5 specific technical domains of the project (RL Convergence, Edge Compute, Telemetry, Cloud Sync, Reward Modeling). 
+*   **Manual Time Estimate:** ~45 minutes per domain (reading, identifying flaws, formatting a defense). Total: ~3.75 hours.
+*   **Workflow Time:** 5 minutes of setup/document upload + 2 minutes of generation. Total: ~7 minutes.
 
-*   **Manual Time:** ~45 minutes per domain (reading, identifying flaws, formatting a defense). Total: ~3.75 hours.
-*   **Workflow Time:** 5 minutes of setup/upload + 2 minutes of generation. Total: ~7 minutes.
-
-### Failure Points & Human Review
-*   **Failure Point:** NotebookLM occasionally hallucinates specific algorithms (e.g., assuming PPO over DDPG) if the math isn't explicitly defined in the uploaded PDF.
-*   **Human Check:** The actual reinforcement learning reward equations must be manually reviewed before memorizing the generated rebuttals.
-
-> **📸 IMAGE REQUIRED BELOW: Drop a screenshot of your NotebookLM or Claude Project workflow running here.**
-> ![Workflow Execution](./path_to_workflow_screenshot.png)
+### 3. Failure Points & Required Human Review
+*   **Failure Point:** The synthesis step occasionally hallucinates specific algorithms (e.g., assuming Proximal Policy Optimization) if the exact math isn't explicitly defined in the uploaded PDFs.
+*   **Human Check:** The actual reinforcement learning reward equations and specific networking parameters must be manually reviewed and corrected before finalizing the generated rebuttals.
 
 ---
 
 ## 🤖 Task 4.4 (FL-05): Agent Concepts and MCP Basics
 
-### Explainer: Agents, Workflows, and the Model Context Protocol (MCP)
+### 1. Explainer: Workflows vs. Agents
+In backend engineering, distinguishing between a workflow and an agent is critical. 
 
-In the current landscape of AI, the term "agent" is frequently misused to describe basic automation. Understanding the architectural distinction between a workflow and an agent is critical for engineering reliable backend AI systems.
+A **workflow** is a deterministic, directed system where the execution path is hardcoded. Tools like n8n or standard API integrations process steps in a predictable sequence. The LLM is merely a functional node within that sequence, transforming data exactly when triggered. 
 
-**Workflows vs. Agents**
-A **workflow** is a deterministic, directed system. The execution path is hardcoded by the developer. Tools like n8n, Zapier, or a standard API integration process steps in a predictable sequence (e.g., Step A triggers Step B, which loops through Step C). The LLM is merely a functional node *within* that sequence, transforming data exactly when it is told to. 
+An **agent** controls its own flow. Given a goal, a set of tools, and an environment, it uses the LLM as a reasoning engine to autonomously decide *which* tool to use and *when* to use it. An agent handles errors dynamically, pivoting its strategy if a tool fails, whereas a workflow will simply crash or follow a rigid error-catching route.
 
-An **agent**, conversely, controls its own control flow. Instead of a developer writing a loop, the agent is given a goal, a set of tools, and an environment. It uses the LLM as a reasoning engine to decide *which* tool to use, *when* to use it, and *whether* it has achieved its goal. An agent handles errors dynamically, pivoting its strategy if a tool fails, whereas a workflow will simply crash or follow a predefined error-catching route.
+**Classifying FL-04:** My Defense Prep Pipeline is strictly a **workflow**. Data is manually moved between NotebookLM and Claude, and the prompt sequence is rigidly defined. Even if automated via a script, the execution path remains deterministic.
 
-**Classifying FL-04**
-My FL-04 Defense Prep Pipeline is strictly a **workflow**. I manually move data from NotebookLM to Claude and prompt it to format a table. Even if fully automated via n8n, it remains a workflow because the execution path is rigidly defined. 
+### 2. Model Context Protocol (MCP) Primitives
+MCP acts as a universal standardization layer for AI to interact with external systems, operating on three primitives:
+1.  **Resources:** Read-only data access (e.g., letting an LLM read local log files or documentation).
+2.  **Prompts:** Reusable templates and conversational context shared with the model.
+3.  **Tools:** Executable functions the model can call (e.g., running a script, querying a database).
 
-**Model Context Protocol (MCP)**
-To make an agent truly useful, it must interact with the outside world. The Model Context Protocol (MCP) acts as a universal "USB-C port" for AI. Instead of writing custom API wrappers for every LLM, MCP standardizes how AI connects to external data sources. It operates on three primitives:
-1.  **Resources:** Read-only data access (e.g., letting Claude read local log files or API documentation).
-2.  **Prompts:** Reusable templates and context shared with the model.
-3.  **Tools:** Executable functions the model can call (e.g., running a SQL query, executing a Python script, or pushing to GitHub).
+### 3. MCP Connector Implementation
+I connected the official File System MCP server to my local AI environment, granting the model the ability to read local directories—a task standard chat interfaces cannot perform.
 
-**Connecting MCP**
-I connected the official File System MCP server to Claude Desktop. This allowed the model to step outside its chat window and directly read local files.
+*Three Executed Tool-Call Tasks:*
+1.  Instructed the model to navigate into the specific, separate folder containing my Week 7 PDF report generator assignment and summarize its dependency structure.
+2.  Asked the model to read the local `logs/quarantine.jsonl` file generated by the LLM Triage API to identify the most frequent schema validation failure.
+3.  Instructed the model to read a local `JOB-CARD.md` file and verify if it violated any constraints listed in a locally stored assignment PDF.
 
-*The 3 Tool-Call Tasks:*
-1.  Instructed Claude to read a local `server.js` file from my drive and summarize its API endpoints.
-2.  Asked Claude to read my local `logs/quarantine.jsonl` error log and identify the most frequent validation failure.
-3.  Instructed Claude to read my `JOB-CARD.md` and check if it violated any rules from the assignment guidelines stored in a separate local PDF.
-
-**Agentic Upgrade for FL-04**
-To upgrade my FL-04 workflow into a true agent, I would integrate a Web Search tool and a GitHub MCP connector. Instead of me uploading PDFs, I would give the agent the goal: *"Find recent 2026 papers on RL state-space explosion, cross-reference them against my local GitHub repo's Python code, and generate a defense rebuttal for any mismatched optimizations."* The agent would autonomously search, read the code, and draft the response without human hand-offs.
-
-> **📸 IMAGE REQUIRED BELOW: Drop screenshots of Claude Desktop successfully utilizing the MCP Tool (showing the tool-call UI).**
-> ![MCP Tool Call 1](./path_to_mcp_1.png)
-> ![MCP Tool Call 2](./path_to_mcp_2.png)
-> ![MCP Tool Call 3](./path_to_mcp_3.png)
+### 4. Agentic Upgrade for FL-04
+To upgrade my defense prep workflow into a true autonomous agent, I would integrate a Web Search tool and a GitHub MCP connector. Instead of manually uploading PDFs, I would give the agent the goal: *"Search for 2026 academic papers on reinforcement learning state-space explosion, cross-reference them against the Python code in my local repository, and generate a markdown table of potential defense critiques."* The agent would autonomously research, read the code, and draft the response without human hand-offs.
