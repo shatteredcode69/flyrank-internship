@@ -9,7 +9,7 @@
 
 The portfolio has officially crossed the threshold from a local project to a live, public artifact. It is not perfect, but it is real, populated with actual case studies, and accessible on the internet.
 
-*   **Live URL:** `https://muhammadabbas.vercel.app` *(Deployed via Vercel)*
+*   **Live URL:** `https://my-cloud-portfolio-six.vercel.app/` *(Deployed via Vercel)*
 *   **Completeness:** Every page from the sitemap is reachable. Placeholder text has been completely removed and replaced with the actual content mapped in Week 3 (including the Cloud-Edge RL thesis overview and the AI Decision Flow engine).
 *   **The "Real Person" Feedback:** I sent the link to a fellow engineering student and member of the local AWS Cloud Club.
     *   *What they saw:* They navigated straight to the Hybrid Cloud-Edge architecture case study.
