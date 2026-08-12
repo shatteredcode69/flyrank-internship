@@ -9,7 +9,7 @@
 
 The first major milestone of the build phase is establishing the deployment pipeline and ensuring public reachability. The repository has been initialized, connected to the hosting provider, and successfully deployed to the public internet.
 
-*   **Live URL:** `[https://muhammadabbas.github.io/portfolio](https://my-cloud-portfolio-six.vercel.app/)`
+*   **Live URL:** `(https://my-cloud-portfolio-six.vercel.app/)`
 *   **Deployment Architecture:** The project is deployed using GitHub Pages, ensuring a zero-cost, highly available static hosting environment.
 *   **Mobile Verification:** The blank page was explicitly tested on a mobile device over a cellular network to verify DNS resolution, SSL handshake completion, and baseline responsive rendering outside of a local development environment.
 *   **Claude Project Sync:** To maintain architectural consistency moving forward, the Week 3 Identity Kit (Inter/JetBrains Mono fonts, Slate/Orange palette), the content map, and all case study outlines have been loaded into a dedicated Claude Project.
