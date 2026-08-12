@@ -29,9 +29,11 @@ This repository serves as my living portfolio and technical deliverable for the 
 - [x] **[Week 2: The Prompt Ladder](./AI_Fluency/Week_02/Task_2_Prompt_Ladder)**
 - [x] **[Week 2: Prompting Fundamentals on Real Tasks v2](./AI_Fluency/Week_02/Task_3_Prompting_Fundamentals)** 
 - [x] **[Week 3: Portfolio Foundations & Identity](./AI_Fluency/Week_03)** *(Completed)*
-  - [x] Task 3.1: Decide Once: Build Your Identity Kit
-  - [x] Task 3.2: Kill your darlings: Curate Your Images
-  - [x] Task 3.3: The Through-Line: Map Content & CTAs
+- [x] **[Week 4: Build Phase, Automation workflows, and Agent Concepts](./AI_Fluency/Week_04)** *(Completed)*
+  - [x] Task 4.1: Empty but Live: Ship a Blank Page
+  - [x] Task 4.2: Three Roads: Choose Your Stack with AI
+  - [x] Task 4.3 (FL-04): Ship an Automation Workflow v2
+  - [x] Task 4.4 (FL-05): Agent Concepts and MCP Basics
 - [x] **[Week 6: Capstone 1 - Impact Project](./AI_Fluency/Week_06_Capstone)**
 - [x] **[Week 10: Capstone 2 - Send the Link](./AI_Fluency/Week_10_Capstone)**
 
