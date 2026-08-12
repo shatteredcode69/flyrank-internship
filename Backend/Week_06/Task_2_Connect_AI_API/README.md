@@ -20,7 +20,7 @@ To put a Large Language Model behind an Express API (`POST /triage`) to perform 
 
 ## 🧪 Runnable cURL Commands
 
-**1. Valid Request:**
+### 1. Valid Request (Happy Path)
 ```bash
 curl -X POST http://localhost:3001/triage \
   -H "Content-Type: application/json" \
@@ -36,7 +36,12 @@ curl -X POST http://localhost:3001/triage \
 }
 ```
 
-**2. Invalid Input Request (Guard Triggered):**
+**📸 SCREENSHOT 1: Successful cURL Response**
+<img width="1920" height="892" alt="1 1" src="https://github.com/user-attachments/assets/091649ba-c90e-4f2a-af43-4aff2d7e272c" />
+
+---
+
+### 2. Invalid Input Request (Guard Triggered)
 ```bash
 curl -X POST http://localhost:3001/triage \
   -H "Content-Type: application/json" \
@@ -50,6 +55,9 @@ curl -X POST http://localhost:3001/triage \
 }
 ```
 
+**📸 SCREENSHOT 2: Invalid cURL Response (Zod Validation)**
+<img width="1920" height="916" alt="1 2" src="https://github.com/user-attachments/assets/ca4c8a21-44d1-4bd0-b8b9-f21a6dd26b1e" />
+
 ---
 
 ## 📊 Eval Score Result
@@ -57,3 +65,6 @@ curl -X POST http://localhost:3001/triage \
 - **Score:** 8/8 (100%)[cite: 2]
 - **Prompt Version:** `v1`[cite: 2]
 - **Date:** August 12, 2026[cite: 2]
+
+**📸 SCREENSHOT 3: Eval Suite Output**
+<img width="1920" height="1080" alt="1 3" src="https://github.com/user-attachments/assets/c3e69727-4360-420d-87b7-1d4c48eef888" />
