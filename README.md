@@ -41,6 +41,11 @@ Every directory in this repository is self-contained. Inside each weekly folder,
 - [x] **[Week 6: System Ownership & Design Critiques](./AI_Fluency/Week_06)** 
 - [x] **[Week 7: Quality Assurance & Mobile Optimization](./AI_Fluency/Week_07)** 
 - [x] **[Week 8: Dynamic Features & Final Agent Documentation](./AI_Fluency/Week_08)** 
+- [x] **[Week 9: Hardening, Launch, and Future-Proofing](./AI_Fluency/Week_09)** 
+  - [x] Task 1: Break Your Own Site
+  - [x] Task 2: Plant Your Flag: Domain + Badge
+  - [x] Task 3: The Plan to Keep Building
+  - [ ] Task 4: *(Lead review pending)*
 - [x] **[Week 10: Capstone 2 - Send the Link](./AI_Fluency/Week_10_Capstone)**
 
 ### ⚙️ Backend AI Engineering Track (Core Systems)
@@ -49,14 +54,8 @@ Every directory in this repository is self-contained. Inside each weekly folder,
 - [x] **[Week 4: JWT Authentication & Route Protection](./Backend/Week_04)**
 - [x] **[Week 5: Polite Web Scrapers & Data Extraction](./Backend/Week_06)**
 - [x] **[Week 6: AI Integrations & Background Jobs (Inngest)](./Backend/Week_06)**
-  - [x] Task 1: Your First Background Job
-  - [x] Task 2: Connect to an AI API (Triage System)
 - [x] **[Week 7: Decision Flows & AI Generators](./Backend/Week_07)**
-  - [x] Task 1: Automated PDF Report Generator
-  - [x] Task 2: AI Decision Flow (React Flow + Inngest)
 - [ ] **[Week 8: Agents & Final Capstone](./Backend/Week_08)**
-  - [ ] Agent with Guardrails *(Lead review pending)*
-  - [ ] Capstone Documentation *(Lead review pending)*
 - [x] **[Backend Capstone: Image Relevance & Auto-Tagging Engine](./Backend/Capstone_Image_Relevance)** 🎉
 
 ---
