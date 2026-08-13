@@ -1,0 +1,13 @@
+run: "docker compose up --build"
+seed: "docker compose exec app python -m app.seed"
+test: "docker compose exec app pytest -v"
+base_url: "http://localhost:8000"
+endpoints:
+  meter: "/api/v1/usage/record"
+  usage: "/api/v1/usage/rollup"
+  webhook_stripe: "/api/v1/webhooks/stripe"
+  webhook_local: "/api/v1/webhooks/local"
+  create_tenant: "/api/v1/tenants"
+  checkout_stripe: "/api/v1/billing/checkout/stripe"
+  checkout_local: "/api/v1/billing/checkout/local"
+  health: "/health"
