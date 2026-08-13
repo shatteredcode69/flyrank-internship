@@ -32,10 +32,10 @@ This repository serves as my living portfolio and technical deliverable for the 
 - [x] **[Week 4: Build Phase, Automation workflows, and Agent Concepts](./AI_Fluency/Week_04)** *(Completed)*
 - [x] **[Week 5: Deployment, Real Users, and Personal AI Agents](./AI_Fluency/Week_05)** *(Completed)*
 - [x] **[Week 6: Polish, Feedback, and System Ownership](./AI_Fluency/Week_06)** *(Completed)*
-- [x] **[Week 7: Quality Assurance and Mobile Optimization](./AI_Fluency/Week_07)** *(Completed)*
-  - [x] Task 1: Open It on Your Phone
-  - [ ] Task 2: Lead review pending
-  - [ ] Task 3: Lead review pending
+  - [x] Task 1: Explain It Like You Built It
+  - [x] Task 2: Survive the Crit
+  - [ ] Task 3: Professional Setup and Security Baseline *(Lead review pending)*
+- [x] **[Week 6: Capstone 1 - Impact Project](./AI_Fluency/Week_06_Capstone)**
 - [x] **[Week 10: Capstone 2 - Send the Link](./AI_Fluency/Week_10_Capstone)**
 
 ### ⚙️ Backend AI Engineering Track
