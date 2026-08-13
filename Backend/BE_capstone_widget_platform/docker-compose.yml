@@ -1,0 +1,51 @@
+services:
+  api:
+    build: .
+    container_name: flyrank-widget-api
+    ports:
+      - "4000:4000"
+    environment:
+      NODE_ENV: development         # keeps /debug toggles available for the demo (§13)
+      PORT: 4000
+      BASE_URL: http://localhost:4000
+      JWT_SECRET: docker-compose-dev-secret-change-me
+      SQLITE_PATH: /app/data/app.sqlite
+      GEO_PROVIDER_A_URL: http://ip-api.com/json
+      GEO_PROVIDER_B_URL: https://ipapi.co
+      RATE_LIMIT_IP_WINDOW_MS: 60000
+      RATE_LIMIT_IP_MAX: 20
+      RATE_LIMIT_WIDGET_WINDOW_MS: 60000
+      RATE_LIMIT_WIDGET_MAX: 60
+      DEBUG_ENDPOINTS_ENABLED: "true"
+    volumes:
+      - widget_data:/app/data
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:4000/health', r => process.exit(r.statusCode===200?0:1)).on('error', () => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Serves test-site/index.html on a SECOND origin, exactly matching the
+  # brief's "customer website" architecture (§4 part 4, §7). `docker compose
+  # up` alone gives you both the API and a real second-origin browser target.
+  test-site:
+    image: node:20-slim
+    container_name: flyrank-test-site
+    working_dir: /site
+    volumes:
+      - ./test-site:/site
+    command: npx --yes serve /site -l 5500
+    ports:
+      - "5500:5500"
+    depends_on:
+      - api
+
+volumes:
+  widget_data:
+
+# ── Optional Postgres path ─────────────────────────────────────────────
+# The brief's stack table allows "PostgreSQL via Docker (or SQLite to
+# start)". This project ships with SQLite for true zero-setup. To run
+# against Postgres instead: add a `postgres` service here, set
+# DATABASE_URL on `api`, and swap src/db/pool.js + repository.js's driver
+# from better-sqlite3 to `pg` — see README § "Swapping the DB for Postgres".

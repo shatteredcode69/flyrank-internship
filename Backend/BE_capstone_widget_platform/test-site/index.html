@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acme Bakery — a "customer" website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 60px auto; padding: 0 20px; color: #222; }
+    h1 { margin-bottom: 4px; }
+    .badge { display: inline-block; background: #fef3c7; color: #92400e; padding: 4px 10px; border-radius: 999px; font-size: 12px; margin-bottom: 20px; }
+    code { background: #f4f4f5; padding: 2px 6px; border-radius: 4px; }
+    .note { background: #f4f4f5; border-radius: 8px; padding: 14px 18px; margin-top: 30px; font-size: 14px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <span class="badge">This page is NOT part of the widget platform</span>
+  <h1>🥐 Acme Bakery</h1>
+  <p>
+    Welcome to Acme Bakery's homepage. This file lives in <code>/test-site</code> and is served
+    from a completely different origin (a second local port, e.g. <code>http://localhost:5500</code>)
+    than the widget API (e.g. <code>http://localhost:4000</code>) — exactly what the capstone brief
+    calls for: "the customer site is a plain HTML file opened from a different origin."
+  </p>
+  <p>
+    Below, our marketing team pasted the one-line embed snippet they got from the FlyRank
+    dashboard. Everything from here down — the popup, the config fetch, the submission —
+    is the widget platform reaching across origins into a page it does not own.
+  </p>
+
+  <div class="note">
+    <strong>How to use this page:</strong>
+    <ol>
+      <li>Start the API: <code>npm run dev</code> (or <code>docker compose up</code>)</li>
+      <li>Create a widget via the API or <code>npm run seed</code></li>
+      <li>Replace the <code>data-widget-id</code> value below with your real widget id</li>
+      <li>Serve this folder on a different port: <code>npm run test-site</code> → http://localhost:5500</li>
+      <li>Open that URL — the widget should appear in the bottom-right corner</li>
+    </ol>
+  </div>
+
+  <!-- ▼▼▼ THE EMBED SNIPPET — this is the entire integration ▼▼▼ -->
+  <script
+    src="http://localhost:4000/widget/v1/widget.js"
+    data-widget-id="REPLACE_WITH_REAL_WIDGET_ID"
+    async
+  ></script>
+  <!-- ▲▲▲ end embed snippet ▲▲▲ -->
+</body>
+</html>

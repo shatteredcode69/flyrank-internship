@@ -1,0 +1,41 @@
+name: flyrank-capstone-widget-platform
+track: backend
+capstone: Embeddable Widget & Lead-Capture Platform
+stack: node-express-sqlite
+
+run: docker compose up --build
+seed: docker compose exec api npm run seed
+test: npm test
+base_url: http://localhost:4000
+
+endpoints:
+  - method: POST
+    path: /api/auth/register
+    auth: none
+  - method: POST
+    path: /api/auth/login
+    auth: none
+  - method: GET
+    path: /api/widgets
+    auth: bearer
+  - method: POST
+    path: /api/widgets
+    auth: bearer
+  - method: GET
+    path: /api/widgets/:id/embed
+    auth: bearer
+  - method: GET
+    path: /public/widgets/:id/config
+    auth: none
+  - method: OPTIONS
+    path: /public/widgets/:id/submissions
+    auth: none
+  - method: POST
+    path: /public/widgets/:id/submissions
+    auth: none
+  - method: GET
+    path: /api/dashboard/widgets/:id/stats
+    auth: bearer
+  - method: GET
+    path: /widget/v1/widget.js
+    auth: none
