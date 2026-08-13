@@ -1,0 +1,39 @@
+# Machine-readable manifest read by the capstone evaluator (§26).
+name: multi-platform-social-campaign-publisher
+track: FlyRank Backend Track
+difficulty: medium-hard
+
+run: docker compose up --build
+seed: docker compose exec api npm run db:seed
+test: docker compose exec api npm test
+migrate: docker compose exec api npm run db:migrate
+
+base_url: http://localhost:3000
+
+endpoints:
+  - method: GET
+    path: /health
+  - method: POST
+    path: /api/campaigns
+  - method: GET
+    path: /api/campaigns
+  - method: GET
+    path: /api/campaigns/:id
+  - method: POST
+    path: /api/campaigns/:id/schedule
+  - method: POST
+    path: /api/social-posts/:id/publish
+  - method: GET
+    path: /api/social-posts/:id
+  - method: POST
+    path: /webhook/social-delivery
+
+fake_platform:
+  base_url: http://localhost:4000
+  endpoints:
+    - POST /instagram/publish
+    - POST /x/publish
+    - POST /instagram/status
+    - POST /x/status
+    - POST /oauth/token
+    - GET /health

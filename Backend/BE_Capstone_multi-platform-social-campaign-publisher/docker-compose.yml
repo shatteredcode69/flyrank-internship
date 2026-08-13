@@ -1,0 +1,82 @@
+name: social-campaign-publisher
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: campaign_user
+      POSTGRES_PASSWORD: campaign_pass
+      POSTGRES_DB: campaign_publisher
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U campaign_user -d campaign_publisher"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  fake-platform:
+    build: ./fake-platform
+    environment:
+      PORT: 4000
+      FAKE_PLATFORM_WEBHOOK_TARGET_URL: http://api:3000/webhook/social-delivery
+      WEBHOOK_SECRET: ${WEBHOOK_SECRET}
+    ports:
+      - "4000:4000"
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: api
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://campaign_user:campaign_pass@postgres:5432/campaign_publisher?schema=public
+      REDIS_URL: redis://redis:6379
+      FAKE_PLATFORM_BASE_URL: http://fake-platform:4000
+    ports:
+      - "3000:3000"
+    volumes:
+      - generated-storage:/app/storage/generated
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      fake-platform:
+        condition: service_started
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://campaign_user:campaign_pass@postgres:5432/campaign_publisher?schema=public
+      REDIS_URL: redis://redis:6379
+      FAKE_PLATFORM_BASE_URL: http://fake-platform:4000
+    volumes:
+      - generated-storage:/app/storage/generated
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      fake-platform:
+        condition: service_started
+
+volumes:
+  postgres-data:
+  generated-storage:

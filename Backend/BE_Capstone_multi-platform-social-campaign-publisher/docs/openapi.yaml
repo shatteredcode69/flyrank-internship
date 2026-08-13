@@ -1,0 +1,103 @@
+openapi: 3.0.3
+info:
+  title: Multi-Platform Social Campaign Publisher
+  version: "1.0.0"
+  description: >
+    Turns one blog post into a scheduled, idempotent, rate-limit-aware
+    multi-platform social campaign, published against a fake platform server.
+servers:
+  - url: http://localhost:3000
+paths:
+  /health:
+    get:
+      summary: Health check (verifies DB + Redis connectivity)
+      responses:
+        "200": { description: healthy }
+        "503": { description: degraded }
+  /api/campaigns:
+    post:
+      summary: Create a campaign (generates image variants + captions for all platforms)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [title, body, sourceUrl, sourceImagePath]
+              properties:
+                title: { type: string }
+                body: { type: string }
+                sourceUrl: { type: string, format: uri }
+                sourceImagePath: { type: string }
+      responses:
+        "201": { description: Campaign created }
+        "400": { description: Validation error }
+    get:
+      summary: List campaigns (cursor-paginated)
+      parameters:
+        - in: query
+          name: limit
+          schema: { type: integer, default: 20 }
+        - in: query
+          name: cursor
+          schema: { type: string }
+      responses:
+        "200": { description: Paginated campaign list }
+  /api/campaigns/{id}:
+    get:
+      summary: Get a campaign with its social posts
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      responses:
+        "200": { description: Campaign }
+        "404": { description: Not found }
+  /api/campaigns/{id}/schedule:
+    post:
+      summary: Schedule a campaign's posts for durable publishing
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [scheduledAt]
+              properties:
+                scheduledAt: { type: string, format: date-time }
+      responses:
+        "200": { description: Campaign scheduled }
+        "409": { description: Already scheduled }
+  /api/social-posts/{id}/publish:
+    post:
+      summary: Publish one social post immediately (idempotent — safe to call repeatedly)
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      responses:
+        "202": { description: Publish accepted/processed }
+  /api/social-posts/{id}:
+    get:
+      summary: Get a social post's current status
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+      responses:
+        "200": { description: SocialPost }
+        "404": { description: Not found }
+  /webhook/social-delivery:
+    post:
+      summary: Signed delivery webhook from the fake platform (HMAC-SHA256, header x-webhook-signature)
+      responses:
+        "200": { description: Webhook accepted and processed }
+        "400": { description: Invalid signature or payload — status left unchanged }

@@ -1,0 +1,152 @@
+// Multi-Platform Social Campaign Publisher — database schema
+// See docs/database.md for the ER diagram and design rationale.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Campaign: one blog post being turned into a multi-platform social push.
+// ---------------------------------------------------------------------------
+model Campaign {
+  id          String   @id @default(uuid())
+  title       String
+  body        String
+  sourceUrl   String
+  sourceImage String // path/URL to the original source image
+  status      CampaignStatus @default(DRAFT)
+  scheduledAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  socialPosts SocialPost[]
+
+  @@index([status])
+  @@index([scheduledAt])
+}
+
+enum CampaignStatus {
+  DRAFT
+  SCHEDULED
+  PUBLISHING
+  COMPLETED
+  FAILED
+}
+
+// ---------------------------------------------------------------------------
+// SocialAccount: a (fake) connected account on a platform, holding an
+// encrypted OAuth access token. Mirrors "PlatformAccount" from the brief.
+// ---------------------------------------------------------------------------
+model SocialAccount {
+  id                 String   @id @default(uuid())
+  platform           Platform
+  externalAccountId  String // account id on the fake platform
+  encryptedToken     String // AES-256-GCM ciphertext, base64
+  tokenIv            String // base64 IV/nonce, unique per encryption
+  tokenAuthTag       String // base64 GCM auth tag
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  socialPosts SocialPost[]
+
+  @@unique([platform, externalAccountId])
+}
+
+enum Platform {
+  INSTAGRAM
+  X
+}
+
+// ---------------------------------------------------------------------------
+// SocialPost: one platform-specific post belonging to a campaign.
+// Status may only reach PUBLISHED via a signature-verified webhook —
+// never merely because the publish HTTP call returned 2xx.
+// ---------------------------------------------------------------------------
+model SocialPost {
+  id               String   @id @default(uuid())
+  campaignId       String
+  campaign         Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+
+  platform         Platform
+  socialAccountId  String
+  socialAccount    SocialAccount @relation(fields: [socialAccountId], references: [id])
+
+  imagePath        String
+  imageWidth       Int
+  imageHeight      Int
+  caption          String
+
+  // Deterministic, unique per (campaign, platform) logical publish request.
+  // This is the idempotency anchor described in docs/reliability.md.
+  idempotencyKey   String @unique
+
+  status           SocialPostStatus @default(QUEUED)
+  externalPostId   String? // id returned/confirmed by the fake platform
+  attempts         Int      @default(0)
+  lastError        String?
+  scheduledAt      DateTime?
+  publishedAt      DateTime?
+
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  webhookEvents    WebhookEvent[]
+
+  @@unique([campaignId, platform])
+  @@index([status])
+  @@index([scheduledAt])
+}
+
+enum SocialPostStatus {
+  QUEUED
+  PUBLISHING
+  PUBLISHED
+  FAILED
+}
+
+// ---------------------------------------------------------------------------
+// IdempotencyRecord: durable record of a publish attempt's outcome, keyed by
+// the same idempotencyKey used against the fake platform. Guarantees that a
+// retried publish (including after a timeout where we never saw the
+// platform's response) converges on exactly one external post.
+// ---------------------------------------------------------------------------
+model IdempotencyRecord {
+  id             String   @id @default(uuid())
+  idempotencyKey String   @unique
+  socialPostId   String
+  status         IdempotencyStatus @default(IN_FLIGHT)
+  externalPostId String?
+  responseHash   String? // hash of the platform's response, for detecting a changed replay
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+enum IdempotencyStatus {
+  IN_FLIGHT
+  COMPLETED
+  FAILED
+}
+
+// ---------------------------------------------------------------------------
+// WebhookEvent: every delivery webhook received, valid or forged, for audit
+// and replay-protection (dedupe on platformEventId).
+// ---------------------------------------------------------------------------
+model WebhookEvent {
+  id               String   @id @default(uuid())
+  socialPostId     String?
+  socialPost       SocialPost? @relation(fields: [socialPostId], references: [id])
+
+  platformEventId  String   @unique // replay-protection dedupe key
+  platform         Platform
+  signatureValid   Boolean
+  payload          Json
+  processedAt      DateTime?
+  receivedAt       DateTime @default(now())
+
+  @@index([signatureValid])
+}
